@@ -3,6 +3,7 @@
 Instructions to demo HPA on OCP
 
 deploy pod which serves PHP webpage with expensive computations
+
     oc new-project demohpa
     git clone https://github.com/ralvares/ocp-hpa
     oc new-app . --name=php-apache
