@@ -7,13 +7,11 @@ deploy pod which serves PHP webpage with expensive computations
     oc new-project demohpa
     git clone https://github.com/ralvares/ocp-hpa
     oc new-app . --name=php-apache
-    oc autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+    oc set resources deployment/php-apache --limits=cpu=500m --requests=cpu=200m
 
 Create horizontal pod autoscaler to scale pod based on CPU load-
 
-
     oc autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
-
 
 Create pod with shell we will use to request that PHP webpage
 
