@@ -10,7 +10,7 @@ deploy pod which serves PHP webpage with expensive computations
 
 Create horizontal pod autoscaler to scale pod based on CPU load-
 
-    oc autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10
+    oc autoscale deployment php-apache --cpu-percent=30 --min=1 --max=5
 
 Create pod with shell we will use to request that PHP webpage
 
